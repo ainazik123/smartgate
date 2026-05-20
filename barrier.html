@@ -1,10 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barrier Control</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-$END$
+
+<div class="dashboard-layout">
+
+  <div class="sidebar">
+
+    <div>
+
+      <div class="logo sidebar-logo">
+        SmartGate AI
+      </div>
+
+      <div class="menu">
+
+        <button onclick="goToDashboard()">
+          Dashboard
+        </button>
+
+        <button onclick="goToMonitoring()">
+          Monitoring
+        </button>
+
+        <button class="active-btn" onclick="goToBarrier()">
+          Barrier Control
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="main">
+
+    <div class="topbar">
+
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
+    </div>
+
+    <h1 class="page-title">
+      Smart Barrier Control
+    </h1>
+
+    <div class="barrier-card">
+
+      <div id="status" class="barrier-status closed">
+        Closed
+      </div>
+
+      <div class="barrier-box">
+
+        <div class="pole"></div>
+
+        <div id="barrier"></div>
+
+      </div>
+
+      <div class="barrier-buttons">
+
+        <button class="green-btn" onclick="openBarrier()">
+          Open Barrier
+        </button>
+
+        <button class="dark-btn" onclick="closeBarrier()">
+          Close Barrier
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
