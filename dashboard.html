@@ -1,10 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-$END$
+
+<div class="dashboard-layout">
+
+  <div class="sidebar">
+
+    <div>
+
+      <div class="logo sidebar-logo">
+        SmartGate AI
+      </div>
+
+      <div class="menu">
+
+        <button class="active-btn" onclick="goToDashboard()">
+          Dashboard
+        </button>
+
+        <button onclick="goToMonitoring()">
+          Monitoring
+        </button>
+
+        <button onclick="goToBarrier()">
+          Barrier Control
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="main">
+
+    <div class="topbar">
+
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
+    </div>
+
+    <h1 class="page-title">
+      Dashboard
+    </h1>
+
+    <p class="page-subtitle">
+      Manage vehicles and monitor parking access
+    </p>
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+
+        <span>Total Vehicles</span>
+
+        <h2>3</h2>
+
+      </div>
+
+      <div class="stat-card">
+
+        <span>Active Passes</span>
+
+        <h2>3</h2>
+
+      </div>
+
+      <div class="stat-card">
+
+        <span>Today Entries</span>
+
+        <h2>142</h2>
+
+      </div>
+
+      <div class="stat-card">
+
+        <span>Denied Access</span>
+
+        <h2>1</h2>
+
+      </div>
+
+    </div>
+
+    <div class="table-card">
+
+      <div class="table-top">
+
+        <h3>Vehicle Database</h3>
+
+      </div>
+
+      <table>
+
+        <tr>
+          <th>License Plate</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+
+        <tr>
+          <td>ABC-1234</td>
+          <td>
+                        <span class="status allowed">
+                            Active
+                        </span>
+          </td>
+          <td>
+            <button class="small-red">
+              Delete
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>XYZ-5678</td>
+          <td>
+                        <span class="status allowed">
+                            Active
+                        </span>
+          </td>
+          <td>
+            <button class="small-red">
+              Delete
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>DEF-9012</td>
+          <td>
+                        <span class="status denied">
+                            Expired
+                        </span>
+          </td>
+          <td>
+            <button class="small-red">
+              Delete
+            </button>
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
