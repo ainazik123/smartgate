@@ -1,10 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoring</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-$END$
+
+<div class="dashboard-layout">
+
+  <div class="sidebar">
+
+    <div>
+
+      <div class="logo sidebar-logo">
+        SmartGate AI
+      </div>
+
+      <div class="menu">
+
+        <button onclick="goToDashboard()">
+          Dashboard
+        </button>
+
+        <button class="active-btn" onclick="goToMonitoring()">
+          Monitoring
+        </button>
+
+        <button onclick="goToBarrier()">
+          Barrier Control
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="main">
+
+    <div class="topbar">
+
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
+    </div>
+
+    <h1 class="page-title">
+      Real-Time Monitoring
+    </h1>
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <span>AI Status</span>
+        <h2>Active</h2>
+      </div>
+
+      <div class="stat-card">
+        <span>Detections Today</span>
+        <h2>342</h2>
+      </div>
+
+      <div class="stat-card">
+        <span>Access Granted</span>
+        <h2>324</h2>
+      </div>
+
+      <div class="stat-card">
+        <span>Access Denied</span>
+        <h2>18</h2>
+      </div>
+
+    </div>
+
+    <div class="monitor-layout">
+
+      <div class="camera-feed">
+
+        Live Camera Feed
+
+      </div>
+
+      <div class="history-panel">
+
+        <h3>Detection History</h3>
+
+        <div class="history-item green-history">
+          ABC-1234 — Granted
+        </div>
+
+        <div class="history-item green-history">
+          XYZ-5678 — Granted
+        </div>
+
+        <div class="history-item red-history">
+          UNKNOWN — Denied
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
